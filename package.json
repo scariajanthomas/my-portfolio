@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "postbuild": "copy dist\\index.html dist\\404.html"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",
