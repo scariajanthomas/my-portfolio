@@ -57,6 +57,12 @@ const getFormattedMastodonValue = (
   }
 };
 
+const SectionLabel: React.FC<{ label: string }> = ({ label }) => (
+  <div className="text-xs font-semibold text-base-content/40 uppercase tracking-widest mt-3 mb-1 px-1">
+    {label}
+  </div>
+);
+
 const ListItem: React.FC<{
   icon: React.ReactNode;
   title: React.ReactNode;
@@ -168,6 +174,28 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
     return array;
   };
 
+  const hasSocial =
+    social?.linkedin ||
+    social?.x ||
+    social?.mastodon ||
+    social?.researchGate ||
+    social?.dribbble ||
+    social?.behance ||
+    social?.facebook ||
+    social?.instagram ||
+    social?.reddit ||
+    social?.threads ||
+    social?.youtube ||
+    social?.udemy ||
+    social?.medium ||
+    social?.dev ||
+    social?.stackoverflow ||
+    social?.website ||
+    social?.telegram ||
+    social?.discord;
+
+  const hasContact = social?.phone || social?.email;
+
   return (
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="card-body">
@@ -195,6 +223,28 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   }
                 />
               )}
+
+              {/* Contact Section */}
+              {hasContact && <SectionLabel label="Contact" />}
+              {social?.phone && (
+                <ListItem
+                  icon={<RiPhoneFill />}
+                  title="Phone:"
+                  value={social.phone}
+                  link={`tel:${social.phone}`}
+                />
+              )}
+              {social?.email && (
+                <ListItem
+                  icon={<RiMailFill />}
+                  title="Email:"
+                  value={social.email}
+                  link={`mailto:${social.email}`}
+                />
+              )}
+
+              {/* Social Section */}
+              {hasSocial && <SectionLabel label="Social" />}
               <ListItem
                 icon={<AiFillGithub />}
                 title="GitHub:"
@@ -341,22 +391,6 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   title="Telegram"
                   value={social.telegram}
                   link={`https://t.me/${social.telegram}`}
-                />
-              )}
-              {social?.phone && (
-                <ListItem
-                  icon={<RiPhoneFill />}
-                  title="Phone:"
-                  value={social.phone}
-                  link={`tel:${social.phone}`}
-                />
-              )}
-              {social?.email && (
-                <ListItem
-                  icon={<RiMailFill />}
-                  title="Email:"
-                  value={social.email}
-                  link={`mailto:${social.email}`}
                 />
               )}
               {social?.discord && (

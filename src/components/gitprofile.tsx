@@ -191,14 +191,6 @@ const GitProfile = ({ config }: { config: Config }) => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
               <div className="col-span-1">
                 <div className="grid grid-cols-1 gap-6">
-                  {!sanitizedConfig.themeConfig.disableSwitch && (
-                    <ThemeChanger
-                      theme={theme}
-                      setTheme={setTheme}
-                      loading={loading}
-                      themeConfig={sanitizedConfig.themeConfig}
-                    />
-                  )}
                   <AvatarCard
                     profile={profile}
                     loading={loading}
@@ -279,8 +271,18 @@ const GitProfile = ({ config }: { config: Config }) => {
             <footer
               className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}
             >
-              <div className="card card-sm bg-base-100 shadow-sm">
-                <Footer content={sanitizedConfig.footer} loading={loading} />
+              <div className="card card-sm bg-base-100 shadow-sm w-full">
+                <div className="card-body flex flex-col sm:flex-row items-center justify-center gap-3">
+                  {!sanitizedConfig.themeConfig.disableSwitch && (
+                    <ThemeChanger
+                      theme={theme}
+                      setTheme={setTheme}
+                      loading={loading}
+                      themeConfig={sanitizedConfig.themeConfig}
+                    />
+                  )}
+                  <Footer content={sanitizedConfig.footer} loading={loading} />
+                </div>
               </div>
             </footer>
           )}
