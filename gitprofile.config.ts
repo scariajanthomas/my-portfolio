@@ -56,7 +56,7 @@ const CONFIG = {
     medium: '', //'arifszn',
     dev: '', // 'arifszn',
     stackoverflow: '', // example: '1/jeff-atwood'
-    discord: '703850569605054515',
+    discord: '',
     telegram: '',
     website: '', //'https://www.arifszn.com',
     phone: '+91 9188682763',
