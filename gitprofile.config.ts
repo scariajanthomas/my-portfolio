@@ -41,7 +41,7 @@ const CONFIG = {
     imageURL: 'https://github.com/scariajanthomas.png' 
   },
   social: {
-    linkedin: 'www.linkedin.com/in/jan-scaria-thomas',
+    linkedin: 'jan-scaria-thomas',
     x: '', //'arif_szn',
     mastodon: '', // 'arifszn@mastodon.social',
     researchGate: '',
@@ -56,10 +56,10 @@ const CONFIG = {
     medium: '', //'arifszn',
     dev: '', // 'arifszn',
     stackoverflow: '', // example: '1/jeff-atwood'
-    discord: '',
+    discord: '703850569605054515',
     telegram: '',
     website: '', //'https://www.arifszn.com',
-    phone: '',
+    phone: '+91 9188682763',
     email: 'scaria.jan.thomas@gmail.com',
   },
   resume: {
