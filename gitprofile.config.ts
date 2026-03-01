@@ -204,11 +204,7 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/scariajanthomas"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: `© 2025 Jan Thomas · QA Engineer · <a class="text-primary" href="mailto:scaria.jan.thomas@gmail.com">scaria.jan.thomas@gmail.com</a>`,
 
   enablePWA: true,
 };
