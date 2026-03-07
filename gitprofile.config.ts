@@ -64,7 +64,7 @@ const CONFIG = {
   },
   resume: {
     fileUrl:
-      'https://drive.google.com/file/d/1_IOl5CANygjuvpik0fLgDRRqBGtHx3qX/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
+      'https://drive.google.com/file/d/13XVrvW-N5TBXWdF55UNLQNW2rpAGYiZ6/view?usp=sharing', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Manual Testing',
